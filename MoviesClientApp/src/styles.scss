@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Karla&family=Rubik:wght@600&&display=swap');
+/*@import "./bootstrap/css/bootstrap.css";*/
+
+//palette colors
+$dark-black: #100E0E;
+$bluish-dark:#1C1D22;
+$red:#970000;
+$dark-red:#6A0303;
+$white:rgb(214, 218, 220);
+$light-grey:#BCB9B9;
+
+//mixins
+@mixin card-design(){
+  width: 230px;
+  border: none;
+  border-radius: 0px !important;
+  background: transparent !important;
+  cursor: pointer;
+}
+@mixin card-overay(){
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.264);
+    opacity: 0;
+}
+@mixin card-title(){
+  max-width: 95%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: $white;
+  font-size: 18px;
+}
+@mixin btn($bg) {
+  border-radius: 50px;
+  //background: ;
+  background: $bg;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $white;
+  i {
+    color: $dark-black;
+  }
+}
+//---global styles---//
+//card design
+.card
+{
+@include card-design();
+}
+
+.card-image{
+  position: relative;
+  overflow: hidden !important;
+
+  .card-img-top{
+    border-radius: 0px;
+    transition: 0.5s;
+  }
+
+  .overlay{
+@include card-overay()
+  }
+
+  &:hover .overlay{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover .card-img-top{
+    transform: scale(1.1);
+  }
+}
+
+.card-title {
+@include card-title()
+}
+//footer
+footer{
+  background: lighten($color: #030303, $amount: 7);
+  p{
+    color:$light-grey
+  }
+}

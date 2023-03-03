@@ -1,0 +1,19 @@
+@import "../../../styles.scss";
+
+.container-fluid{
+  background: $dark-black;
+}
+
+.carousel{
+  height: 750px;
+  overflow: hidden;
+}
+
+.wrapper{
+//background: $bluish-blak;
+}
+
+.wrapper h4{
+  color:$light-grey;
+}
+

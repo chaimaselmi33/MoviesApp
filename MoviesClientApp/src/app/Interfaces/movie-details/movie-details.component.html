@@ -1,0 +1,49 @@
+<div class="container-fluid px-0">
+  <div class="movieDetailsWrapper ps-5">
+    <img class="poster" src="data:image/jpeg;base64,{{movie.mv_poster}}" width="100%">
+    <div class="movieDetailsContainer ps-5">
+      <h1 class="movieTitle">{{movie.mvTitle}}</h1>
+      <div class="d-flex my-4">
+        <h6 class="me-3 mvDetails">{{hours}}h, {{minutes}}min</h6>
+        <h6 class="me-3 mvDetails">{{movie.category.cat_name}}</h6>
+        <h6 class="me-3 mvDetails">{{movie.mv_pub_date | date: 'yyyy'}}</h6>
+      </div>
+      <div class="d-flex align-items-center">
+        <h3 class="me-4 my-auto imdbRate">{{movie.mv_imdbRate}}</h3>
+        <div><img class="al" src="../../../assets/Images/imdb.png" width="60"></div>
+      </div>
+      <p class="mt-5 movie-description">
+        {{movie.mv_descrip}}
+      </p>
+      <div class="d-flex my-4">
+        <p class="mvDetails">Actors :</p><p class="mx-1 mvDetails" *ngFor="let ac of actors">
+          {{ac}}
+        </p>
+      </div>
+      <div class="d-flex">
+        <button type="button" class="btn watchBtn  px-4 me-4"><span><i class="fa fa-play me-3"></i></span>Watch</button>
+        <button type="button" class="btn addToListBtn  px-4 me-4"><span><i class="fa fa-plus me-3"></i></span>Add
+          toList</button>
+      </div>
+    </div>
+  </div>
+  <div class="similarMoviesContainer ps-5 py-4">
+    <h4 class="ms-5">Similar Movies</h4>
+    <div class="d-flex ms-5 pt-4 justify-content-start ">
+      <div class="me-5" *ngFor="let m of similarMovies">
+        <div class="card" (click)="navigate(m.mv_id)">
+          <div class="card-image">
+            <img class="card-img-top" src="data:image/jpeg;base64,{{m.movieImg}}" alt="movie image">
+            <div class="overlay"></div>
+          </div>
+          <div class="card-body ps-0 pb-0">
+            <h5 class="card-title">{{m.mvTitle}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="py-2">
+  <p class="m-0 text-center">Autry@Copyright</p>
+</footer>

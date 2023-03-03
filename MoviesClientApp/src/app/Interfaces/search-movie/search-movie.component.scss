@@ -1,0 +1,49 @@
+@import "../../../styles.scss";
+
+.container-fluid{
+  min-height: 100vh;
+  background: $dark-black;
+  }
+
+.searchInput{
+  height: 50px; border-top-left-radius: 50px ;
+  border-bottom-left-radius: 50px;
+  color: $white;
+}
+
+.input-group-prepend .input-group-text{
+  height: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.input-group-append .input-group-text{
+  height: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.input-group-text i{
+  font-size: 20px;
+  color:$white;
+}
+
+.searchInput, .input-group-text{
+  border: none;
+  background: lighten($color: $bluish-dark, $amount: 5);
+}
+
+.searchInput:focus{
+  box-shadow: none;
+  color: $light-grey;
+}
+
+.linkHolder{
+  width: 10%;
+}
+
+.linkHolder a{
+  text-decoration:none;
+  font-size: 18px;
+  color :$light-grey;
+}

@@ -1,0 +1,65 @@
+@import "../../../styles.scss";
+
+.carousel-item{
+  height: 700px;
+}
+
+.carousel-item img{
+  position: absolute;
+  z-index: -1;
+}
+
+.movie-details{
+  position:relative ;
+  top:40%
+}
+
+.movieTitle {
+  color: $light-grey;
+  font-family: 'Rubik', sans-serif;
+}
+
+.movie-descrip {
+  width: 550px;
+  text-align: justify;
+  color: $white;
+  font-family: 'Karla', sans-serif;
+}
+
+.watchBtn {
+  @include btn($dark-red);
+}
+
+.addToListBtn {
+  @include btn($red);
+}
+
+.gradient-divider {
+  height: 5px;
+  background: rgb(68, 26, 1);
+  background: linear-gradient(90deg, rgba(68, 26, 1, 1) 0%, rgba(106, 2, 2, 1) 6%, rgba(98, 0, 0, 1) 18%, rgba(100, 0, 0, 1) 28%, rgba(107, 0, 0, 1) 34%, rgba(115, 0, 0, 1) 39%, rgba(18, 18, 20, 1) 100%);
+}
+
+.wrapper {
+  background: $dark-black;
+}
+
+.categoriesContainer a {
+  font-size: 20px;
+  color: $light-grey;
+  text-decoration: none;
+}
+
+.moviesContainer {
+  background: $dark-black;
+}
+
+.pagesContainer a {
+  font-size: 18px;
+  padding: 15px;
+  background: rgb(47, 48, 58);
+  background: linear-gradient(0deg, rgba(47, 48, 58, 0.4206932773109243) 0%, rgba(220, 199, 199, 0) 50%, rgba(47, 48, 58, 0.4150910364145658) 100%);
+  text-decoration: none;
+  color: $white;
+}
+

@@ -1,0 +1,37 @@
+<div class="container-fluid px-0 pt-5">
+  <div class="mt-4 py-5 ps-5 searchBox d-flex w-100 align-items-center">
+    <form style="width: 90%;">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text pe-4" (click)="onSubmit()"><i class="fa fa-search"></i></span>
+        </div>
+        <input class="form-control searchInput" type="text" placeholder="Search a movie" name="title" [(ngModel)]="title">
+        <!--
+          using ref var
+          <input class="form-control searchInput" type="text" placeholder="Search a movie" #title>
+        -->
+        <div class="input-group-append">
+          <span class="input-group-text pe-4" (click)="reset()"><i class="fa fa-close"></i></span>
+        </div>
+      </div>
+    </form>
+    <div class="text-center linkHolder"><a routerLink="/movies">Return</a>
+    </div>
+  </div>
+  <div class="px-5">
+    <div class="row">
+      <div class="col-2 my-5" *ngFor="let m of movies">
+        <div class="card" (click)="navigate(m.mv_id)">
+          <div class="card-image">
+            <img class="card-img-top" src="data:image/jpeg;base64,{{m.movieImg}}" alt="movie image">
+            <div class="overlay"></div>
+          </div>
+          <div class="card-body ps-0 pb-0">
+            <h5 class="card-title">{{m.mvTitle}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

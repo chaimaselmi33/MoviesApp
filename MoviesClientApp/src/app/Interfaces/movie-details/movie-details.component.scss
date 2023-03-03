@@ -1,0 +1,58 @@
+@import "../../../styles.scss";
+
+.movieDetailsWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.movieDetailsContainer {
+  position: relative;
+  padding-top:15%;
+}
+
+.poster{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:-1;
+}
+
+.movieTitle{
+  color: $light-grey;
+  font-family: 'Rubik', sans-serif;
+}
+
+.mvDetails{
+  color: lighten($color: $light-grey, $amount: 5);
+}
+
+.imdbRate{
+  color:$white;
+
+}
+
+.movie-description{
+  width: 550px;
+  text-align: justify;
+  color: $white;
+  font-family: 'Karla', sans-serif;
+}
+
+.watchBtn {
+  @include btn($dark-red);
+}
+
+.addToListBtn {
+  @include btn($red);
+}
+
+.similarMoviesContainer{
+  background: $dark-black;
+}
+
+.similarMoviesContainer h4{
+  color: $white;
+}

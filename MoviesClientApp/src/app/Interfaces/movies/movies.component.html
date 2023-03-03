@@ -1,0 +1,61 @@
+<div class="container-fluid px-0">
+  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div *ngFor="let m of movies; let i=index">
+        <div class="carousel-item" [ngClass]="(i == 0 ) ? 'active' : ''" data-bs-interval="2000">
+          <img src="data:image/jpeg;base64,{{m.mv_poster}}"
+            class="d-block w-100" alt="...">
+          <div class="movie-details ms-5">
+            <h1 class="movieTitle">{{m.mvTitle}}</h1>
+            <p class="movie-descrip my-5">{{m.mv_descrip}}</p>
+            <div class="d-flex">
+              <button type="button" class="btn watchBtn  px-4 me-4"><span><i
+                    class="fa fa-play me-3"></i></span>Watch</button>
+              <button type="button" class="btn addToListBtn  px-4 me-4"><span><i class="fa fa-plus me-3"></i></span>Add
+                toList</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gradient-divider"></div>
+  <div class="wrapper px-4 pt-5">
+    <div class="d-flex categoriesContainer py-4">
+      <h6 class="my-auto me-5"><a routerLink="/movies">All Movies</a></h6>
+      <div *ngFor="let c of categories">
+        <h6 class="my-auto me-5"><a routerLink="/movies/{{c.cat_name}}">{{c.cat_name}}</a></h6>
+      </div>
+    </div>
+    <br>
+    <div class="movieContainer">
+      <div class="row">
+        <div class="col-2" *ngFor="let m of movies">
+          <div class="card" (click)="navigate(m.mv_id)">
+            <div class="card-image">
+              <img class="card-img-top" src="data:image/jpeg;base64,{{m.movieImg}}" alt="movie image">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body ps-0 pb-0">
+              <h5 class="card-title">{{m.mvTitle}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="pagesContainer py-5 flex text-center">
+        <div *ngIf="totalMoviesPages">
+          <a class="me-4" *ngFor="let c of moviePagesArray; let i = index" routerLink="/movies"
+            (click)="getAllMovies(i)">{{i+1}}</a>
+        </div>
+        <div *ngIf="totalMvByCatPages">
+          <a class="me-4" *ngFor="let c of catPagesArray; let i = index" routerLink="/movies"
+            (click)="getCatRequestedPage(i)">{{i+1}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="py-2">
+  <p class="m-0 text-center">Autry@Copyright</p>
+</footer>

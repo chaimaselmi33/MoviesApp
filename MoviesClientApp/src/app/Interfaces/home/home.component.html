@@ -1,0 +1,118 @@
+<div class="container-fluid px-0 pb-5">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="../../../assets/Images/slide3.jpg" class="d-block w-100" alt="movie image">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="../../../assets/Images/slide2.jpg" class="d-block w-100" alt="movie image">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="../../../assets/Images/slide1.jpg" class="d-block w-100" alt="movie">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="wrapper mb-5 py-4 px-3">
+    <h4>Action Movies</h4>
+    <div class="moviesContainer d-flex justify-content-between my-4">
+      <div *ngFor="let m of actionMovies" class="movie">
+        <div class="card" (click)="navigate(m.mv_id)">
+          <div class="card-image">
+            <img class="card-img-top" src="{{m.movieImg}}" alt="movie image">
+            <div class="overlay"></div>
+          </div>
+          <div class="card-body ps-0 pb-0">
+            <h5 class="card-title">{{m.mvTitle}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper mb-5 py-4 px-3">
+    <h4>Thriller Movies</h4>
+    <div class="moviesContainer d-flex justify-content-start my-4">
+      <div *ngFor="let m of thrillerMovies" class="movie">
+        <div class="card me-4" (click)="navigate(m.mv_id)">
+          <div class="card-image">
+            <img class="card-img-top" src="{{m.movieImg}}" alt="movie image">
+            <div class="overlay"></div>
+          </div>
+          <div class="card-body ps-0 pb-0">
+            <h5 class="card-title">{{m.mvTitle}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper py-4 px-3">
+    <h4>Animation Movies</h4>
+    <div class="moviesContainer d-flex justify-content-start my-4">
+      <div *ngFor="let m of animationMovies" class="movie">
+        <div class="card me-4" (click)="navigate(m.mv_id)">
+          <div class="card-image">
+            <img class="card-img-top" src="{{m.movieImg}}" alt="movie image">
+            <div class="overlay"></div>
+          </div>
+          <div class="card-body ps-0 pb-0">
+            <h5 class="card-title">{{m.mvTitle}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="py-2">
+  <p class="m-0 text-center">Autry@Copyright</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<app-search-movie></app-search-movie>
+<br>
+<h3>Action Movies</h3>
+<ng-container *ngIf="actionMovies">
+  <div *ngFor="let m of actionMovies">
+    <h3>{{m.mv_title}}</h3>
+    <p>{{m.mv_descrip}}</p>
+    <a routerLink="/movie/{{m.mv_id}}">movie details</a>
+  </div>
+</ng-container>
+<hr>
+<ng-container *ngIf="thrillerMovies">
+  <h3>Thriller Movies</h3>
+  <div *ngFor="let m of thrillerMovies">
+    <h3>{{m.mv_title}}</h3>
+    <p>{{m.mv_descrip}}</p>
+  </div>
+</ng-container>
+<hr>
+<ng-container *ngIf="animationMovies">
+  <h3>Animation Movies</h3>
+  <div *ngFor="let m of animationMovies">
+    <h3>{{m.mv_title}}</h3>
+    <p>{{m.mv_descrip}}</p>
+  </div>
+</ng-container>
+
+-->
