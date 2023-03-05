@@ -8,7 +8,7 @@ install app dependencies run:
 npm install
 2- Development server
 start development server run:
-`#RRGGBBng serve`
+`ng serve`
 3- Build
 build the app run:
 ng build 
