@@ -1,6 +1,6 @@
 # MoviesApp
 # About this project
-<p>This is a movies application developped using Angular as front-end and springBoot as back-end and designed with Figma</p></br> 
+This is a movies application developped using Angular as front-end and springBoot as back-end and designed with Figma</br> 
 ![preview](https://user-images.githubusercontent.com/69457494/222967497-552eec53-daba-4849-b848-17b9e0e2bd0a.jpg)
 # Demo
 video here
