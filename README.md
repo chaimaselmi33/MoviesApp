@@ -22,7 +22,7 @@ To start developement server on http://127.0.0.1:4200 run:\
 3- Build
 To build the app run:\
 `ng build `\
-The build artifacts will be stored in the dist/ directory, use the --prod flag for a production build.
+The build artifacts will be stored in the dist/ directory, use the `--prod` flag for a production build.
 ## Server-Side App
 To run the springboot application open the project in eclipse IDE then run the main class.
 
