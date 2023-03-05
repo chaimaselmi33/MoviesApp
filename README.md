@@ -4,6 +4,12 @@ This is a movies application developped using Angular as front-end and springBoo
 ![preview](https://user-images.githubusercontent.com/69457494/222967497-552eec53-daba-4849-b848-17b9e0e2bd0a.jpg)
 # Demo
 video here
+# Feachers
+The user can:
+- Diplay the list of all movies (Pagination included)
+- Display movies by category (Pagination included)
+- Display movie details
+- Search a movie by its title
 # How To Run
 ## Client-Side App
 1- Install the app dependencies
@@ -18,10 +24,5 @@ To build the app run:\
 The build artifacts will be stored in the dist/ directory, use the --prod flag for a production build.
 ## Server-Side App
 To run the springboot application open the project in eclipse IDE then run the main class.
-# Feachers
-The user can:
-- Diplay the list of all movies (Pagination included)
-- Display movies by category (Pagination included)
-- Display movie details
-- Search a movie by its title
+
 
