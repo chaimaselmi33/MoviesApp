@@ -18,8 +18,8 @@ To run the springboot application open the project in eclipse IDE then run the m
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the main method in the de.codecentric.springbootsample.Application class from your IDE
 # Feachers
 The user can:\ 
-Diplay the list of all movies (Pagination included)
-Display movies by category (Pagination included)
-Display movie details
-Search a movie by its title
+- Diplay the list of all movies (Pagination included)
+- Display movies by category (Pagination included)
+- Display movie details
+- Search a movie by its title
 
