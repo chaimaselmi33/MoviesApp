@@ -5,7 +5,7 @@ This is a movies application developped using Angular as front-end and springBoo
 ![preview](https://user-images.githubusercontent.com/69457494/222967497-552eec53-daba-4849-b848-17b9e0e2bd0a.jpg)
 # Demo
 video here
-# Feachers
+# Features
 The user can:
 - Diplay the list of all movies (Pagination included)
 - Display movies by category (Pagination included)
